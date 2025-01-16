@@ -1,5 +1,0 @@
-api_version: 1
-php_version: 8.2
-database:
-  version: 10.6
-build_step: true
