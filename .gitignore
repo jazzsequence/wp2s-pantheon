@@ -2,6 +2,7 @@ debug.log
 node_modules/
 .vscode/sftp.json
 _dist/
+.lando.yml
 
 # WordPress files
 !wp-config.php
