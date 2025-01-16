@@ -1,5 +1,55 @@
 {
+	"name": "jazzsequence/wp2s-pantheon",
+	"type": "project",
+	"license": "MIT",
+	"description": "Pantheon custom upstream based on FreeWP/WP2S",
+	"authors": [
+		{
+			"name": "Chris Reynolds",
+			"email": "me@chrisreynolds.io",
+			"homepage": "https://github.com/jazzsequence"
+		},
+		{
+			"name": "Vinny Green",
+			"email": "vinnysgreen@gmail.com",
+			"homepage": "https://wp2s.com"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+		}
+	],
+	"require": {
+		"php": ">=8.0",
+		"composer/installers": "^2.2",
+		"pantheon-systems/pantheon-mu-plugin": "^1.5"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+			"wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"wp-content/themes/{$name}/": ["type:wordpress-theme"]
+		}
+	},
 	"scripts": {
+		"pre-install-cmd": [
+			"@sync-wp"
+		],
+		"pre-update-cmd": [
+			"@sync-wp"
+		],
 		"sync-wp": [
 			"private/scripts/sync-latest-wp.sh"
 		]
