@@ -4,7 +4,7 @@ node_modules/
 _dist/
 .lando.yml
 
-# WordPress files
+# WordPress
 !wp-config.php
 wp-admin/
 wp-includes/
@@ -24,3 +24,7 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
+
+# Composer-managed
+vendor/
+wp-content/mu-plugins/pantheon-mu-plugin/
