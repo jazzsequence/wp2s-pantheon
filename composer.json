@@ -1,1 +1,7 @@
-{}
+{
+	"scripts": {
+		"sync-wp": [
+			"private/scripts/sync-latest-wp.sh"
+		]
+	}
+}
