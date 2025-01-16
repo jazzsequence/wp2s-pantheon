@@ -3,6 +3,7 @@ node_modules/
 .vscode/sftp.json
 _dist/
 .lando.yml
+composer.lock
 
 # WordPress
 !wp-config.php
