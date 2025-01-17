@@ -29,7 +29,7 @@ if [[ -f "$CURRENT_VERSION_FILE" ]]; then
   LATEST_VERSION=$(get_latest_wp_version)
 
   if [[ "$CURRENT_VERSION" == "$LATEST_VERSION" ]]; then
-    echo "WordPress is up-to-date (version $CURRENT_VERSION). No action needed."
+    echo "WordPress is up-to-date (version $CURRENT_VERSION)."
     exit 0
   fi
 
