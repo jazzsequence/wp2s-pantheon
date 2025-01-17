@@ -25,7 +25,12 @@
 	"require": {
 		"php": ">=8.0",
 		"composer/installers": "^2.2",
-		"pantheon-systems/pantheon-mu-plugin": "^1.5"
+		"pantheon-systems/pantheon-mu-plugin": "^1.5",
+		"wpackagist-plugin/accessibility-new-window-warnings": "^1.0",
+		"wpackagist-plugin/block-visibility": "^3.7",
+		"wpackagist-plugin/safe-svg": "^2.3",
+		"wpackagist-plugin/wpshopify": "^5.2",
+		"wpackagist-plugin/ws-form": "^1.10"
 	},
 	"config": {
 		"optimize-autoloader": true,

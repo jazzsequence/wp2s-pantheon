@@ -28,3 +28,8 @@ xmlrpc.php
 # Composer-managed
 vendor/
 wp-content/mu-plugins/pantheon-mu-plugin/
+wp-content/plugins/accessibility-new-window-warnings
+wp-content/plugins/block-visibility
+wp-content/plugins/safe-svg
+wp-content/plugins/wpshopify
+wp-content/plugins/ws-form
