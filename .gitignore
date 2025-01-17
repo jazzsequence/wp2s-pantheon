@@ -3,9 +3,20 @@ node_modules/
 .vscode/sftp.json
 _dist/
 .lando.yml
-
-# WordPress
 !wp-config.php
+
+# Composer-managed
+vendor/
+wp-content/mu-plugins/pantheon-mu-plugin/
+wp-content/plugins/accessibility-new-window-warnings
+wp-content/plugins/block-visibility
+wp-content/plugins/safe-svg
+wp-content/plugins/wpshopify
+wp-content/plugins/ws-form
+wp-content/plugins/pantheon-hud
+wp-content/plugins/wp-native-php-sessions
+
+#== WordPress ==#
 wp-admin/
 wp-includes/
 index.php
@@ -24,14 +35,4 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
-
-# Composer-managed
-vendor/
-wp-content/mu-plugins/pantheon-mu-plugin/
-wp-content/plugins/accessibility-new-window-warnings
-wp-content/plugins/block-visibility
-wp-content/plugins/safe-svg
-wp-content/plugins/wpshopify
-wp-content/plugins/ws-form
-wp-content/plugins/pantheon-hud
-wp-content/plugins/wp-native-php-sessions
+#== End WordPress ==#

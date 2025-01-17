@@ -29,7 +29,7 @@ if [[ -f "$CURRENT_VERSION_FILE" ]]; then
   LATEST_VERSION=$(get_latest_wp_version)
 
   if [[ "$CURRENT_VERSION" == "$LATEST_VERSION" ]]; then
-    echo "WordPress is up-to-date (version $CURRENT_VERSION)."
+    echo "WordPress is up-to-date (version $CURRENT_VERSION). No action needed."
     exit 0
   fi
 
@@ -59,6 +59,17 @@ rm -rf $TEMP_DIR/wp-content
 # Sync the remaining files to the current directory (non-destructive)
 echo "Syncing WordPress files to the current directory..."
 rsync -aq $TEMP_DIR/ $DEST_DIR/ --exclude "wp-content"
+
+# Add WordPress files to the Git repository, even if ignored
+echo "Adding WordPress files to Git repository..."
+git add -f wp-admin wp-includes index.php license.txt readme.html \
+  wp-activate.php wp-blog-header.php wp-comments-post.php wp-config-sample.php \
+  wp-cron.php wp-links-opml.php wp-load.php wp-login.php wp-mail.php \
+  wp-settings.php wp-signup.php wp-trackback.php xmlrpc.php
+
+# Commit the changes
+echo "Committing WordPress files..."
+git commit -m "Update WordPress core to version $LATEST_VERSION"
 
 # Clean up
 echo "Cleaning up temporary files..."
